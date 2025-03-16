@@ -3,14 +3,6 @@ local repo = 'https://raw.githubusercontent.com/LionTheGreatRealFrFr/MobileLinor
 local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
 
 local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
-
-local v = game:HttpGet("https://raw.githubusercontent.com/AnhEmTu100/MEME/refs/heads/main/deobfuscated.lua")
-local func = loadstring(v)
-print('Old Loader')
-Library:Notify('Script Loading')
-Notif.New("Xin chào! Đây là thông báo script!Phiên Bản : Test", 3)
-Notif.New("Hiện Thị Lại Các Nút Ấn Sẽ Tự Động Bật Lại Khi Mất!", 4)
-func()
 ----
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
@@ -678,3 +670,11 @@ game.StarterGui:SetCore("SendNotification", {
     Text = serverStatusMessage,
     Duration = 5
 })
+
+local v = game:HttpGet("https://raw.githubusercontent.com/AnhEmTu100/MEME/refs/heads/main/deobfuscated.lua")
+local func = loadstring(v)
+print('Old Loader')
+Library:Notify('Script Loading')
+Notif.New("Xin chào! Đây là thông báo script!Phiên Bản : Test", 3)
+Notif.New("Hiện Thị Lại Các Nút Ấn Sẽ Tự Động Bật Lại Khi Mất!", 4)
+func()
