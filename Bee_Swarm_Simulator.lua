@@ -8,7 +8,7 @@ local v = game:HttpGet("https://raw.githubusercontent.com/AnhEmTu100/MEME/refs/h
 local func = loadstring(v)
 print('Old Loader')
 Library:Notify('Script Loading')
-Notif.New("Xin chào! Đây là thông báo script!", 3)
+Notif.New("Xin chào! Đây là thông báo script!Phiên Bản : Test", 3)
 Notif.New("Hiện Thị Lại Các Nút Ấn Sẽ Tự Động Bật Lại Khi Mất!", 4)
 func()
 ----
@@ -326,7 +326,7 @@ function AdminLoggerMsg()
     AdminMessage = {
         ["embeds"] = {
             {
-                ["title"] = "**R2LX HUB**",
+                ["title"] = "**R2LX HUB Phiên Bản : Test**",
                 ["description"] ="",
                 ["type"] = "rich",
                 ["color"] = tonumber(0xf93dff),
