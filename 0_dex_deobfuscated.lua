@@ -1,23 +1,3 @@
-
-local id = game.PlaceId
-if id==2753915549 then Sea1=true; elseif id==4442272183 then Sea2=true; elseif id==7449423635 then Sea3=true; else game:Shutdown() end;
-game:GetService("Players").LocalPlayer.Idled:connect(function()
-    game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-    wait()
-    game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-end)
-Sea1=false
-Sea2=false
-Sea3=false
-local placeId = game.PlaceId
-if placeId==2753915549 then
-Sea1=true
-elseif placeId==4442272183 then
-Sea2=true
-elseif placeId==7449423635 then
-Sea3=true
-end
-
 local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/r2lx-hub/Fluxus-R2LX/refs/heads/main/fluent-mod-wibu-final%20.lua"))()
 local Window = Fluent:CreateWindow({
     Title="R2LX HUB-BloxFruit",
@@ -49,6 +29,25 @@ local Tabs = {
     Misc=Window:AddTab({ Title="Khác" }),
 }
 local Options = Fluent.Options
+
+local id = game.PlaceId
+if id==2753915549 then Sea1=true; elseif id==4442272183 then Sea2=true; elseif id==7449423635 then Sea3=true; else game:Shutdown() end;
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+    game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+    wait()
+    game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+Sea1=false
+Sea2=false
+Sea3=false
+local placeId = game.PlaceId
+if placeId==2753915549 then
+Sea1=true
+elseif placeId==4442272183 then
+Sea2=true
+elseif placeId==7449423635 then
+Sea3=true
+end
 
 function CheckLevel()
 local Lv = game:GetService("Players").LocalPlayer.Data.Level.Value
@@ -646,41 +645,41 @@ QuestLv=2
 NameMon="Snow Demon"
 CFrameQ=CFrame.new(-1149.328, 13.5759039,-14445.6143,-0.156446099, 0,-0.987686574, 0, 1, 0, 0.987686574, 0,-0.156446099)
 CFrameMon=CFrame.new(-916.222656, 17.1481285,-14638.8125, 0.866007268, 0, 0.500031412, 0, 1, 0,-0.500031412, 0, 0.866007268)
-elseif Lv==2450 or Lv<=2474 or SelectMonster == "Isle Outlaw" or SelectArea == 'Tiki Outpost' then
+elseif Lv == 2450 or Lv <= 2474 or SelectMonster == "Isle Outlaw" or SelectArea == 'Tiki Outpost' then
 Ms = "Isle Outlaw"
 NameQuest = "TikiQuest1"
 QuestLv = 1
 NameMon = "Isle Outlaw"
-CFrameMon=CFrame.new(-16549.890625, 55.68635559082031, -179.91360473632812)
-CFrameMon=CFrame.new(-16162.8193359375, 11.6863374710083, -96.45481872558594)
-elseif Lv==2475 or Lv<=2524 or SelectMonster == "Island Boy" or SelectArea == 'Tiki Outpost' then
+CFrameQ = CFrame.new(-16549.890625, 55.68635559082031, -179.91360473632812)
+CFrameMon = CFrame.new(-16162.8193359375, 11.6863374710083, -96.45481872558594)
+elseif Lv == 2475 or Lv <= 2524 or SelectMonster == "Island Boy" or SelectArea == 'Tiki Outpost' then
 Ms = "Island Boy"
 NameQuest = "TikiQuest1"
 QuestLv = 2
 NameMon = "Island Boy"
-CFrameMon=CFrame.new(-16549.890625, 55.68635559082031, -179.91360473632812)
-CFrameMon=CFrame.new(-16912.130859375, 11.787443161010742, -133.0850830078125)
+CFrameQ = CFrame.new(-16549.890625, 55.68635559082031, -179.91360473632812)
+CFrameMon = CFrame.new(-16912.130859375, 11.787443161010742, -133.0850830078125)
 elseif Lv >= 2525 or SelectMonster == "Isle Champion" or SelectArea == 'Tiki Outpost' then
 Ms = "Isle Champion"
 NameQuest = "TikiQuest2"
 QuestLv = 2
 NameMon = "Isle Champion"
-CFrameMon=CFrame.new(-16542.447265625, 55.68632888793945, 1044.41650390625)
-CFrameMon=CFrame.new(-16848.94140625, 21.68633460998535, 1041.4490966796875)
-elseif Lv==2550 or Lv<=2575 or SelectMonster == "Serpent Hunter" or SelectArea == 'Tiki Outpost 2' then
+CFrameQ = CFrame.new(-16542.447265625, 55.68632888793945, 1044.41650390625)
+CFrameMon = CFrame.new(-16848.94140625, 21.68633460998535, 1041.4490966796875)
+elseif Lv == 2550 or Lv <= 2575 or SelectMonster == "Serpent Hunter" or SelectArea == 'Tiki Outpost 2' then
 Ms = "Serpent Hunter"
 NameQuest = "TikiQuest3"
 QuestLv = 1
 NameMon = "Serpent Hunter"
-CFrameMon=CFrame.new(-16668.0312, 105.315765, 1568.60132, -0.999815822, 2.53269654e-08, 0.0191932656, 2.47972114e-08, 1, -2.78390253e-08, -0.0191932656, -2.73579577e-08, -0.999815822)
-CFrameMon=CFrame.new(-16645.6426, 163.092682, 1352.87317, 0.999801993, -7.3039903e-09, 0.0198997185, 5.12876497e-09, 1, 1.09360379e-07, -0.0198997185, -1.09236666e-07, 0.999801993)
-elseif Lv==2600 or SelectMonster == "Skull Slayer" or SelectArea == 'Tiki Outpost 2' then
+CFrameQ = CFrame.new(-16668.0312, 105.315765, 1568.60132, -0.999815822, 2.53269654e-08, 0.0191932656, 2.47972114e-08, 1, -2.78390253e-08, -0.0191932656, -2.73579577e-08, -0.999815822)
+CFrameMon = CFrame.new(-16645.6426, 163.092682, 1352.87317, 0.999801993, -7.3039903e-09, 0.0198997185, 5.12876497e-09, 1, 1.09360379e-07, -0.0198997185, -1.09236666e-07, 0.999801993)
+elseif Lv == 2600 or SelectMonster == "Skull Slayer" or SelectArea == 'Tiki Outpost 2' then
 Ms = "Skull Slayer"
 NameQuest = "TikiQuest3"
 QuestLv = 2
 NameMon = "Skull Slayer"
-CFrameMon=CFrame.new(-16668.0312, 105.315765, 1568.60132, -0.999815822, 2.53269654e-08, 0.0191932656, 2.47972114e-08, 1, -2.78390253e-08, -0.0191932656, -2.73579577e-08, -0.999815822)
-CFrameMon=CFrame.new(-16838.25, 122.900497, 1722.86694, 0.998448908, 3.55804843e-08, -0.0556759238, -3.229162e-08, 1, 5.99712138e-08, 0.0556759238, -5.80803281e-08, 0.998448908)
+CFrameQ = CFrame.new(-16668.0312, 105.315765, 1568.60132, -0.999815822, 2.53269654e-08, 0.0191932656, 2.47972114e-08, 1, -2.78390253e-08, -0.0191932656, -2.73579577e-08, -0.999815822)
+CFrameMon = CFrame.new(-16838.25, 122.900497, 1722.86694, 0.998448908, 3.55804843e-08, -0.0556759238, -3.229162e-08, 1, 5.99712138e-08, 0.0556759238, -5.80803281e-08, 0.998448908)
 end
 end
 end
