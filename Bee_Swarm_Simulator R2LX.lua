@@ -680,32 +680,35 @@ local supportedGames = {
 }
 
 if supportedGames[placeId] then
-    local v = game:HttpGet("https://raw.githubusercontent.com/AnhEmTu100/MEME/refs/heads/main/deobfuscated.lua")
-    local func = loadstring(v)
-    print('Old Loader')
-    Library:Notify('Script Loading')
-    Notif.New("Xin chào! Đây là thông báo script! Phiên Bản: Test", 3)
-    Notif.New("Hiển thị lại các nút ấn sẽ tự động bật lại khi mất!", 4)
-    func()
+    local v = {
+        [2753915549] = "https://raw.githubusercontent.com/AnhEmTu100/MEME/refs/heads/main/deobfuscated.lua",
+        [4442272183] = "https://raw.githubusercontent.com/AnhEmTu100/MEME/refs/heads/main/deobfuscated.lua",
+        [7449423635] = "https://raw.githubusercontent.com/AnhEmTu100/MEME/refs/heads/main/deobfuscated.lua"
+    }
+
+    for PlaceID, Execute in pairs(v) do
+        if PlaceID == placeId then
+            local func = loadstring(game:HttpGet(Execute))
+            print('Old Loader')
+            Library:Notify('Script Loading')
+            Notif.New("Xin chào! Đây là thông báo script! Phiên Bản: Test", 3)
+            Notif.New("Hiển thị lại các nút ấn sẽ tự động bật lại khi mất!", 4)
+            func()
+        end
+    end
 else
     local player = game.Players.LocalPlayer
     local banDuration = 1337
     local reason = "Cheating | ID 1337"
-    
+
     local message = string.format(
         "You were kicked from this experience:\n" ..
         "You are banned for [%d hours]\n" ..
         "Reason: %s\n\n" ..
         "Game này không được hỗ trợ. Đợi update đi!\n\n" ..
-        "Hãy Đảm Bảo Key Đúng hahahaha!!.",
+        "Hãy đảm bảo key đúng hahahaha!!.",
         banDuration, reason
     )
 
     player:Kick(message)
-end
-
-for PlaceID, Execute in pairs(v) do
-    if PlaceID == game.PlaceId then
-        loadstring(game:HttpGet(Execute))()
-    end
 end
